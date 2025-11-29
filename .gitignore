@@ -1,0 +1,17 @@
+# --- Spring Boot (Server) ---
+server/target/
+server/mvnw
+server/mvnw.cmd
+server/.mvn
+server/.idea
+server/*.iml
+.DS_Store
+
+# --- Vue (Client) ---
+client/node_modules/
+client/dist/
+client/.env.local
+client/.env.*.local
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
