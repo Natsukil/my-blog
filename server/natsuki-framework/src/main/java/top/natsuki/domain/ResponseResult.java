@@ -11,8 +11,6 @@ import java.io.Serializable;
  * @author nat4u
  * @date 2025/11/30  20:50
  */
-@Setter
-@Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseResult<T> implements Serializable {
     private Integer code;
@@ -94,4 +92,22 @@ public class ResponseResult<T> implements Serializable {
         return this;
     }
 
+    public Integer getCode() {
+        return code;
+    }
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+    public String getMsg() {
+        return msg;
+    }
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+    public T getData() {
+        return data;
+    }
+    public void setData(T data) {
+        this.data = data;
+    }
 }

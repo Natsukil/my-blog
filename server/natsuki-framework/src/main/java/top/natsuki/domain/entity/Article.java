@@ -16,7 +16,9 @@ import lombok.Data;
  */
 @TableName(value ="na_article")
 @Data
-public class Article implements Serializable {
+public class Article
+//        implements Serializable
+{
     /**
      * 文章ID
      */
@@ -93,7 +95,7 @@ public class Article implements Serializable {
      */
     private Integer delFlag;
 
-    @Serial
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+//    @Serial
+//    @TableField(exist = false)
+//    private static final long serialVersionUID = 1L;
 }

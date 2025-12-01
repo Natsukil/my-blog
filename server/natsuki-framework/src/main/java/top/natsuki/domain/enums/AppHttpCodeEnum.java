@@ -10,7 +10,7 @@ public enum AppHttpCodeEnum {
     NO_OPERATOR_AUTH(403,"没有操作权限"),
     SYSTEM_ERROR(500,"系统内部错误"),
     USERNAME_EXIST(501,"用户名已存在"),
-    PHONENUMBER_EXIST(502,"手机号已存在"), EMAIL_EXIST(503,"邮箱已存在"),
+    PHONE_EXIST(502,"手机号已存在"), EMAIL_EXIST(503,"邮箱已存在"),
     REQUIRED_USERNAME(504,"用户名不能为空"),
     LOGIN_ERROR(505,"用户名或密码错误");
     int code;
