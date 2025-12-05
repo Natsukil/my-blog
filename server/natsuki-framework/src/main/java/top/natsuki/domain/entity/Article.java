@@ -8,7 +8,11 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 /**
  * 
@@ -16,6 +20,9 @@ import lombok.Data;
  */
 @TableName(value ="na_article")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Accessors(chain=true)
 public class Article
 //        implements Serializable
 {
@@ -23,7 +30,7 @@ public class Article
      * 文章ID
      */
     @TableId(type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     /**
      * 文章标题
@@ -44,6 +51,12 @@ public class Article
      * 文章分类ID
      */
     private Long categoryId;
+
+    /**
+     * 分类名称
+     */
+    @TableField(exist = false)
+    private String categoryName;
 
     /**
      * 文章缩略图
@@ -95,7 +108,6 @@ public class Article
      */
     private Integer delFlag;
 
-//    @Serial
-//    @TableField(exist = false)
-//    private static final long serialVersionUID = 1L;
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

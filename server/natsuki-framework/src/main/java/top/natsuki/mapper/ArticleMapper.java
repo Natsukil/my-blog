@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2025-11-30 20:21:03
 * @Entity top.natsuki.domain.entity.Article
 */
+
 public interface ArticleMapper extends BaseMapper<Article> {
 
 }

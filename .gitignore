@@ -17,7 +17,7 @@ client/yarn-debug.log*
 client/yarn-error.log*
 
 # --- vscode settings ---
-.vscode/
+#.vscode/
 
 # --- IDEA settings ---
-.idea/
+#.idea/

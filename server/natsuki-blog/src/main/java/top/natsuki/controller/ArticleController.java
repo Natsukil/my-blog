@@ -1,4 +1,4 @@
-package controller;
+package top.natsuki.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,14 +21,13 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
-//    @GetMapping("/list")
-//    public List<Article> test(){
-//        return articleService.list();
-//    }
     @GetMapping("/hotArticleList")
     public ResponseResult hotArticleList(){
+        return articleService.hotArticleList();
+    }
 
-         ResponseResult result = articleService.hotArticleList();
-        return result;
+    @GetMapping("/articleList")
+    public ResponseResult ArticleList(Integer pageNum, Integer pageSize, Long categoryId) {
+        return  articleService.articleList(pageNum, pageSize, categoryId);
     }
 }

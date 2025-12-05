@@ -1,9 +1,12 @@
 package top.natsuki.domain.enums;
 
+import lombok.Getter;
+
 /**
  * @author nat4u
  * @date 2025/11/30  20:58
  */
+@Getter
 public enum AppHttpCodeEnum {
     SUCCESS(200,"操作成功"),
     NEED_LOGIN(401,"需要登录后操作"),
@@ -21,10 +24,4 @@ public enum AppHttpCodeEnum {
         this.msg = errorMsg;
     }
 
-    public int getCode() {
-        return code;
-    }
-    public String getMsg() {
-        return msg;
-    }
 }

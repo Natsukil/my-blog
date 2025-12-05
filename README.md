@@ -9,7 +9,7 @@
 - 前端框架：[Vue 3 + JavaScript]
 - 样式：[CSS]
 - 构建工具：[Vite]
-- 后端框架：[Spring Boot]
+- 后端框架：[Spring Boot 4.0.0]
 - 接口格式：[REST / JSON]
 
 ## 快速开始
