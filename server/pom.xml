@@ -39,7 +39,7 @@
         <spring-boot.version>4.0.0</spring-boot.version>
 
         <lombok.version>1.18.42</lombok.version>
-        <fastjson2.version>2.0.52</fastjson2.version>
+        <fastjson2.version>2.0.59</fastjson2.version>
         <jwt.version>4.4.0</jwt.version>
         <mybatis-plus.version>3.5.15</mybatis-plus.version>
         <aliyun-oss.version>3.17.4</aliyun-oss.version>

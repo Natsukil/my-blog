@@ -11,6 +11,7 @@ import top.natsuki.constants.SystemConstants;
 import top.natsuki.domain.ResponseResult;
 import top.natsuki.domain.entity.Article;
 import top.natsuki.domain.entity.Category;
+import top.natsuki.domain.vo.ArticleDetailVO;
 import top.natsuki.domain.vo.ArticleListVO;
 import top.natsuki.domain.vo.HotArticleVO;
 import top.natsuki.domain.vo.PageVO;
@@ -125,6 +126,19 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
 
         PageVO pageVO = new PageVO(articleListVO, page.getTotal());
         return ResponseResult.okResult(pageVO);
+    }
+
+    public ResponseResult articleDetail(Long id){
+        Article article = getById(id);
+
+        ArticleDetailVO articleDetailVO = BeanCopyUtils.copyBean(article, ArticleDetailVO.class);
+
+        Long categoryId = articleDetailVO.getCategoryId();
+        Category category = categoryService.getById(categoryId);
+        if(category != null){
+            articleDetailVO.setCategoryName(category.getName());
+        }
+        return ResponseResult.okResult(articleDetailVO);
     }
 }
 
